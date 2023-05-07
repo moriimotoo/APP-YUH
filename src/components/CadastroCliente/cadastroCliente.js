@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Text, View, StyleSheet, TouchableOpacity, ImageBackground, FlatList, ActivityIndicator } from 'react-native';
-import { TextInput } from 'react-native-paper';
+import {  View, StyleSheet, TouchableOpacity, ImageBackground, FlatList, ActivityIndicator } from 'react-native';
+import { Text, TextInput } from 'react-native-paper';
 import firebase from '../../services/connectionFirebase';
 import ListagemCliente from '../Listar/listagemCliente';
 
@@ -220,19 +220,14 @@ const styles = StyleSheet.create({
       },
       input: {
         fontSize: 12,
-        color:'#C0C0C0',
-        marginTop: 9,
-        marginBottom: 7,
-        marginLeft: 5,
-        marginRight: 10,
-        backgroundColor: '#fff',
-        borderRadius: 9,
-        height: 12,
-        width: 350,
-        padding: 24,
-        borderWidth: 1,
-        borderColor: '#cb836d',
-        flexDirection: 'row'
+    color:'#C0C0C0',
+    marginTop: 15,
+    marginRight: 13,
+    backgroundColor: '#fff',
+    borderRadius: 9,
+    height: 14,
+    width: 350,
+    padding: 24
       },
       back: {
         flex: 1,

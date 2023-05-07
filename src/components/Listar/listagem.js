@@ -1,9 +1,8 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity} from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Modal} from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 export default function Listagem({ data, deleteItem, editItem }) {
-
     return (
 
         <View style={styles.container}>
@@ -13,14 +12,12 @@ export default function Listagem({ data, deleteItem, editItem }) {
             <Text style={styles.text}>Preço(R$): {data.valor}</Text>
             <Text style={styles.text}>Categoria: {data.categoria}</Text>
 
-
-
             <View style={styles.item}>
-
+                
+                        
             <TouchableOpacity onPress={()=> deleteItem(data.key)}> 
                 <Icon name="trash" color="#A52A2A" size={15}>Excluir</Icon> 
             </TouchableOpacity> 
-
             <TouchableOpacity onPress={() => editItem(data)}> 
                 <Icon name="create" color="blue" size={15}>Editar</Icon> 
             </TouchableOpacity> 

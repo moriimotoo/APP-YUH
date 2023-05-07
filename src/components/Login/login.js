@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { StyleSheet, Text, Image, TextInput, View, TouchableOpacity, Button} from 'react-native';
+import { StyleSheet, Text, Image, TextInput, View, TouchableOpacity} from 'react-native';
 import firebase from '../../services/connectionFirebase';
 
 export default function Login({changeStatus}){
@@ -42,7 +42,7 @@ return(
         
         <TextInput placeholder="Digite o e-mail" label="E-mail: " value={email} onChangeText={ (text) => setEmail(text)} style = {styles.text1}/>
 
-        <TextInput placeholder="Digite a senha" label="Senha: " secureTextEntry  value={password} onChangeText={ (text) => setPassword(text)} style = {styles.text1}/>
+        <TextInput placeholder="Digite a senha" label="Senha: " secureTextEntry value={password} onChangeText={ (text) => setPassword(text)} style = {styles.text1}/>
 
       <TouchableOpacity  style={[styles.handleLogin, { backgroundColor: type === 'login' ? '#f5dbd3' : '#f5dbd3' } ]} onPress={handleLogin} >
       <Text style={{ textAlign: 'center'}}>{ type === 'login' ? 'Acessar' : 'Cadastrar' }</Text>

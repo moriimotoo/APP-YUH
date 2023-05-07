@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Icon from 'react-native-vector-icons/Entypo';
+import Icon from 'react-native-vector-icons/FontAwesome5';
 import GerenciarProdutos from '../Produtos/gerenciarprodutos';
 import Home from '../Home/home';
 import CadastroCliente from '../CadastroCliente/cadastroCliente';
@@ -52,16 +52,10 @@ export default function App() {
                                 iconName = 'home';
                                 break;
                             case 'Cadastro Cliente':
-                                iconName = 'list';
-                                break;
-                            case 'Cadastro Produto':
-                                iconName = 'save';
-                                break;
-                            case 'Ler API':
-                                iconName = 'open-book';
+                                iconName = 'user-plus';
                                 break;
                             default:
-                                iconName = 'bell';
+                                iconName = 'plus-circle';
                                 break;
                         }
 
@@ -76,9 +70,7 @@ export default function App() {
                     
                 <Tab.Screen name="Home" component={HomeScreen} />
                 <Tab.Screen name="Cadastro Cliente" component={ListScreen} />
-                <Tab.Screen name="Cadastro Produtdo" component={PostScreen}/>
-                <Tab.Screen name="Ler API" component={LerScreen}/>
-                <Tab.Screen name="Notificações" component={NotificationsScreen} />
+                <Tab.Screen name="Cadastro Produto" component={PostScreen}/>
                 </Tab.Navigator>
         </NavigationContainer>
     );
